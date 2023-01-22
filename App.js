@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Alert, FlatList, Image, StyleSheet, Text, View } from 'react-native';
+import { Alert, FlatList, Image, SafeAreaView, StyleSheet, Text } from 'react-native';
 import { v4 as uuidv4 } from 'uuid';
 import AddItem from './components/AddItem';
 import Header from './components/Header';
@@ -44,13 +44,13 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header title="Shopping List" />
       <Text style={styles.text}>Hello World</Text>
       <Image source={{ uri: 'https://randomuser.me/api/portraits/men/1.jpg' }} style={styles.img} />
       <AddItem addItem={addItem} />
       <FlatList data={items} renderItem={({ item }) => <ListItem item={item} deleteItem={deleteItem} />} />
-    </View>
+    </SafeAreaView>
   );
 }
 
