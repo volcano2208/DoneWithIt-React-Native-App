@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@types/react": "^18.0.32",
     "eslint": "^8.25.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.5.0",
